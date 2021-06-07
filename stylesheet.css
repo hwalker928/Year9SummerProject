@@ -1,0 +1,9 @@
+p {
+    text-align: center
+}
+h1 {
+    text-align: center
+}
+.border-container {
+    border-width:3px !important;
+}
