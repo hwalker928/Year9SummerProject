@@ -13,7 +13,10 @@
         <script>
             function points() {
                 var lengthOfPassword = document.getElementById("pswd_to_check").value.length;
-                document.getElementById("result").innerHTML = "Total score: " + lengthOfPassword;
+                var allowed = false;
+                if (25>lengthOfPassword>7) { allowed = true; }
+                let regex = /^[a-zA-Z0-9!$%^&*()-_=+]+$/;
+                document.getElementById("matchesregex").innerHTML = "Matches character regex? " + regex.test(document.getElementById("pswd_to_check").value);
             }
         </script>
     </head>
@@ -27,8 +30,8 @@
                     <label for="pswd_to_check">Enter a password:</label>
                     <input type="password" class="form-control" id="pswd_to_check">
                 </div>
-                <button type="button" class="btn btn-info float-right" onclick="points()">Calculate</button>
-                <p id="result">Total score: 0</p>
+                <button type="button" class="btn btn-info float-right" onclick="points()">Check</button>
+                <p id="matchesregex">Matches character regex? false</p>
             </div>
         </div>
         <script>
