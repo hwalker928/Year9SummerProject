@@ -10,20 +10,25 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
         <link rel="stylesheet" href="stylesheet.css">
+        <script>
+            function points() {
+                var lengthOfPassword = document.getElementById("pswd_to_check").value.length;
+                document.getElementById("result").innerHTML = "Total score: " + lengthOfPassword;
+            }
+        </script>
     </head>
     <body>
 
         <div class="container p-3 my-3 border border-container border-secondary">
             <h1 style="text-align: center">Check a password</h1>
-            <p>Here you can check any password to see if it is strong enough!<br/>Please note, this website does <b>not</b> store any of your information!</p>
+            <p class="aligntomid">Here you can check any password to see if it is strong enough!<br/>Please note, this website does <b>not</b> store any of your information!</p>
             <div class="container">
-                <div class="row">
-                    <button type="button" data-toggle="tooltip" title="Enter a password to check its strength!" class="btn btn-success col border">Check a password</button>
-                    <button type="button" data-toggle="tooltip" title="Generate a super secure password!" class="btn btn-warning col border">Generate a password</button>
+                <div class="form-group">
+                    <label for="pswd_to_check">Enter a password:</label>
+                    <input type="password" class="form-control" id="pswd_to_check">
                 </div>
-                <div>
-                    <button type="button" data-toggle="tooltip" data-placement="bottom" title="Got bored of this site? Well, here is the leave option." class="btn btn-info col border">Exit website</button>
-                </div>
+                <button type="button" class="btn btn-info float-right" onclick="points()">Calculate</button>
+                <p id="result">Total score: 0</p>
             </div>
         </div>
         <script>
