@@ -14,3 +14,7 @@
 - Digit [+5]
 - Allowed symbol [+5]
 - If the value at this point is 20 [+10]
+- If only alphabet [0]
+- If only digits [0]
+- If only allowed symbols [0]
+- If 3 consecutive letters of a QWERTY keyboard, per set of three [-3]
