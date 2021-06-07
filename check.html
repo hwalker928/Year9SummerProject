@@ -28,9 +28,9 @@
                 }
 
                 if (!(correctlength)) {
-                    reason = "Your password must be between 8 and 24 characters."
+                    document.getElementById("points").innerHTML = "Your password must be between 8 and 24 characters."
                 } else if (!(matchesregex)) {
-                    reason = "Your password may only contain the following symbols: ! $ % ^ & * ( ) - _ = +"
+                    document.getElementById("points").innerHTML = "Your password may only contain the following symbols: ! $ % ^ & * ( ) - _ = +"
                 } else {
                     var points = document.getElementById("pswd_to_check").value.length;
                     if (ucl) { points += 5 }
@@ -61,17 +61,12 @@
             <div class="container">
                 <div class="form-group">
                     <label for="pswd_to_check">Enter a password:</label>
-                    <input type="text" class="form-control" id="pswd_to_check">
+                    <input type="password" class="form-control" id="pswd_to_check">
                 </div>
                 <button type="button" class="btn btn-info float-right" onclick="check()">Check</button>
-                <p id="points"></p>
+                <p id="points">Your password strength will show here.</p>
             </div>
         </div>
-        <script>
-            $(document).ready(function(){
-              $('[data-toggle="tooltip"]').tooltip();
-            });
-        </script>
 
     </body>
 </html>
