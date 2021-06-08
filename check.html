@@ -10,61 +10,19 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
         <link rel="stylesheet" href="stylesheet.css">
-        <script>
-            function check() {
-                var reason = "ok";
-                var matchesregex = /^[a-zA-Z0-9!$%^&*()-_=+]+$/.test(document.getElementById("pswd_to_check").value);
-                if (25>document.getElementById("pswd_to_check").value.length) { if (document.getElementById("pswd_to_check").value.length>7) { var correctlength = true; } else { var correctlength = false; } } else { var correctlength = false; }
-                var ucl = /^(?=.*[A-Z])/.test(document.getElementById("pswd_to_check").value);
-                var lcl = /^(?=.*[a-z])/.test(document.getElementById("pswd_to_check").value);
-                var digit = /^(?=.*[0-9])/.test(document.getElementById("pswd_to_check").value);
-                var allowedsymbols = /^(?=.*[!$%^&*()_=+-])/.test(document.getElementById("pswd_to_check").value);
-                var extraifall = matchesregex&correctlength&ucl&lcl&digit&allowedsymbols;
-
-                if (extraifall == 1) {
-                    extraifall = true;
-                } else {
-                    extraifall = false;
-                }
-
-                if (!(correctlength)) {
-                    document.getElementById("points").innerHTML = "Your password must be between 8 and 24 characters."
-                } else if (!(matchesregex)) {
-                    document.getElementById("points").innerHTML = "Your password may only contain the following symbols: ! $ % ^ & * ( ) - _ = +"
-                } else {
-                    var points = document.getElementById("pswd_to_check").value.length;
-                    if (ucl) { points += 5 }
-                    if (lcl) { points += 5 }
-                    if (digit) { points += 5 }
-                    if (allowedsymbols) { points += 5 }
-                    if (extraifall) { points += 10 }
-
-                    document.getElementById("points").innerHTML = "Total points: " + points;
-                }
-
-
-                console.log("Matches character regex? " + matchesregex);
-                console.log("Good length? " + correctlength);
-                console.log("Upper case letter? " + ucl);
-                console.log("Lower case letter? " + lcl);
-                console.log("Digit? " + digit);
-                console.log("Allowed symbols? " + allowedsymbols);
-                console.log("All true? " + extraifall);
-            }
-        </script>
+        <script src="check.js"></script>
     </head>
     <body>
-
         <div class="container p-3 my-3 border border-container border-secondary">
             <h1 style="text-align: center">Check a password</h1>
-            <p class="aligntomid">Here you can check any password to see if it is strong enough to be used!<br/>Please note, this website does <b>not</b> store any of your information!</p>
+            <p class="aligntomid">Here you can check any password to see how strong it is!<br/>Please note, this website does <b>not</b> store any of your information!</p>
             <div class="container">
                 <div class="form-group">
                     <label for="pswd_to_check">Enter a password:</label>
-                    <input type="password" class="form-control" id="pswd_to_check">
+                    <input type="password" class="form-control" id="pswd_to_check" onchange="check()">
                 </div>
                 <button type="button" class="btn btn-info float-right" onclick="check()">Check</button>
-                <p id="points">Your password strength will show here.</p>
+                <p id="points"><b>Password strength:</b> 0</p>
             </div>
         </div>
 
