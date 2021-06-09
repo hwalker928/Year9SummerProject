@@ -4,3 +4,6 @@
 .border-container {
     border-width:6px !important;
 }
+body {
+    background-image: url('space.webp');
+}
