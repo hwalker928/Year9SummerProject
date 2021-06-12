@@ -63,7 +63,7 @@ function check() {
             var strength = "Medium";
         }
 
-        document.getElementById("points").innerHTML = "<b>Password strength:</b> " + strength + " (" + points + ")";
+        document.getElementById("points").innerHTML = "<b>Password strength:</b> " + strength/54*10 + "% (" + points + ")";
     }
 
 
@@ -77,4 +77,5 @@ function check() {
     console.log("Only letters? " + onlyLetters);
     console.log("Only digits? " + onlyDigits);
     console.log("Only symbols? " + onlySymbols);
+    console.log("Total points: " + points)
 }
