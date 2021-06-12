@@ -35,10 +35,10 @@
             <p class="aligntomid">Here you can generate a super secure password!<br/>Please note, this website does <b>not</b> store any of your information!</p>
             <div class="container">
                 <div class="form-group">
-                    <label for="pswd_to_check">Generated Password:</label>
-                    <input type="password" class="form-control" id="pswd_to_check" onchange="check()">
+                    <label for="final_password">Generated Password:</label>
+                    <input type="text" class="form-control" id="final_password" disabled>
                 </div>
-                <button type="button" class="btn btn-info float-right" onclick="check()">Generate</button>
+                <button type="button" class="btn btn-info float-right" onclick="generate()">Generate!</button>
                 <p id="points"><b>Password strength:</b> 0</p>
             </div>
         </div>

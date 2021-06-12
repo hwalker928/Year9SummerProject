@@ -55,7 +55,15 @@ function check() {
             }
         }
 
-        document.getElementById("points").innerHTML = "<b>Password strength:</b> " + points;
+        if (points > 20) {
+            var strength = "Strong";
+        } else if (points < 1) {
+            var strength = "Weak";
+        } else {
+            var strength = "Medium";
+        }
+
+        document.getElementById("points").innerHTML = "<b>Password strength:</b> " + points + "<b>[" + strength + "]</b>";
     }
 
 
