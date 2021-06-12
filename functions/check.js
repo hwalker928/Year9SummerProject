@@ -34,7 +34,11 @@ function check() {
         if (onlyLetters) { points += -5 }
         if (onlyDigits) { points += -5 }
         if (onlySymbols) { points += -5 }
-
+        
+        
+        for (i = 0, len = qwerty1.length, text = ""; i < len; i++) {
+          console.log(qwerty1[i]);
+        }
 
         document.getElementById("points").innerHTML = "<b>Password strength:</b> " + points;
     }
