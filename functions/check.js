@@ -9,6 +9,11 @@ function check() {
     var onlyDigits = /^[0-9]+$/.test(document.getElementById("pswd_to_check").value);
     var onlySymbols = /^[!$%^&*()_=+-]+$/.test(document.getElementById("pswd_to_check").value);
 
+    const qwerty1 = ["qwe", "wer", "ert", "rty", "tyu", "yui", "uio", "iop"];
+    const qwerty2 = ["asd", "sdf", "dfg", "fgh", "ghj", "hjk", "jkl"];
+    const qwerty3 = ["zxc", "xcv", "cvb", "vbn", "bnm"];
+                     
+    
     if (matchesregex&correctlength&ucl&lcl&digit&allowedsymbols == 1) {
         var extraifall = true;
     } else {
