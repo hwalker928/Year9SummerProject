@@ -4,7 +4,7 @@ function generate() {
     var pass = "";
     for (i = 1; i <= passwordLength; i++) {
         var char = Math.floor(Math.random()* characters.length + 1);
-        pass += str.charAt(char)
+        pass += characters.charAt(char)
     }
     document.getElementById("final_pass").value = pass;
 }
