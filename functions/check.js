@@ -62,8 +62,9 @@ function check() {
         } else {
             var strength = "Medium";
         }
+       
 
-        document.getElementById("points").innerHTML = "<b>Password strength:</b> " + strength + " (" + Math.round(points/54*10) + "%)";
+        document.getElementById("points").innerHTML = "<b>Password strength:</b> " + strength + " (" + Math.round(points/54*100) + "%)";
     }
 
 
