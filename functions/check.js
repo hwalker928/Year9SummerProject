@@ -37,7 +37,8 @@ function check() {
         
         
         for (i = 0, len = qwerty1.length, text = ""; i < len; i++) {
-          console.log(qwerty1[i]);
+            var stringCheck = qwerty1[i];
+            console.log(document.getElementById("pswd_to_check").value.includes(stringCheck));
         }
 
         document.getElementById("points").innerHTML = "<b>Password strength:</b> " + points;
