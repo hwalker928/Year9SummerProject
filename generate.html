@@ -9,6 +9,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
         <link rel="stylesheet" href="assets/stylesheet.css">
         <script src="functions/generate.js"></script>
         <link rel="icon" href="assets/favicon.ico">
@@ -35,9 +36,10 @@
             <p class="aligntomid">Here you can generate a super secure password!<br/>Please note, this website does <b>not</b> store any of your information!</p>
             <div class="container">
                 <div class="form-group">
-                    <label for="final_password">Generated Password:</label>
+                    <label for="final_password"><b>Generated Password:</b></label>
                     <input type="text" class="form-control" id="final_password" disabled>
                 </div>
+                <i class="fas fa-clipboard"></i>
                 <button type="button" class="btn btn-info float-right" onclick="generate()">Generate!</button>
                 <p id="points"><b>Password strength:</b> 0</p>
             </div>
