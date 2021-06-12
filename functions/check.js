@@ -38,19 +38,19 @@ function check() {
         
         for (i = 0, len = qwerty1.length, text = ""; i < len; i++) {
             var stringCheck = qwerty1[i];
-            if(document.getElementById("pswd_to_check").value.includes(stringCheck) {
+            if(document.getElementById("pswd_to_check").value.includes(stringCheck)) {
                points += -5
             }
         }
         for (i = 0, len = qwerty2.length, text = ""; i < len; i++) {
             var stringCheck = qwerty2[i];
-            if(document.getElementById("pswd_to_check").value.includes(stringCheck) {
+            if(document.getElementById("pswd_to_check").value.includes(stringCheck)) {
                points += -5
             }
         }
         for (i = 0, len = qwerty3.length, text = ""; i < len; i++) {
             var stringCheck = qwerty3[i];
-            if(document.getElementById("pswd_to_check").value.includes(stringCheck) {
+            if(document.getElementById("pswd_to_check").value.includes(stringCheck)) {
                points += -5
             }
         }
