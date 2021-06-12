@@ -12,7 +12,7 @@ function check() {
     const qwerty1 = ["qwe", "wer", "ert", "rty", "tyu", "yui", "uio", "iop"];
     const qwerty2 = ["asd", "sdf", "dfg", "fgh", "ghj", "hjk", "jkl"];
     const qwerty3 = ["zxc", "xcv", "cvb", "vbn", "bnm"];
-                     
+    console.clear(); 
     
     if (matchesregex&correctlength&ucl&lcl&digit&allowedsymbols == 1) {
         var extraifall = true;
@@ -43,7 +43,7 @@ function check() {
         document.getElementById("points").innerHTML = "<b>Password strength:</b> " + points;
     }
 
-    console.clear();
+    
     console.log("Matches character regex? " + matchesregex);
     console.log("Good length? " + correctlength);
     console.log("Upper case letter? " + ucl);
