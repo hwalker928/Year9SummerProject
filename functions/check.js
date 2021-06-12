@@ -64,7 +64,7 @@ function check() {
         }
        
 
-        document.getElementById("points").innerHTML = "<b>Password strength:</b> " + strength + " (" + Math.round(points+66/120*100) + "%)";
+        document.getElementById("points").innerHTML = "<b>Password strength:</b> " + strength + " (" + Math.round((points+66)/120*100) + "%)";
     }
 
 
