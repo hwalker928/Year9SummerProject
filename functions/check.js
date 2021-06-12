@@ -12,8 +12,8 @@ function check() {
     const qwerty1 = ["qwe", "wer", "ert", "rty", "tyu", "yui", "uio", "iop"];
     const qwerty2 = ["asd", "sdf", "dfg", "fgh", "ghj", "hjk", "jkl"];
     const qwerty3 = ["zxc", "xcv", "cvb", "vbn", "bnm"];
-    console.clear(); 
-    
+    console.clear();
+
     if (matchesregex&correctlength&ucl&lcl&digit&allowedsymbols == 1) {
         var extraifall = true;
     } else {
@@ -34,23 +34,23 @@ function check() {
         if (onlyLetters) { points += -5 }
         if (onlyDigits) { points += -5 }
         if (onlySymbols) { points += -5 }
-        
-        
+
+
         for (i = 0, len = qwerty1.length, text = ""; i < len; i++) {
             var stringCheck = qwerty1[i];
-            if(document.getElementById("pswd_to_check").value.includes(stringCheck)) {
+            if(document.getElementById("pswd_to_check").value.toLowerCase().includes(stringCheck)) {
                points += -5
             }
         }
         for (i = 0, len = qwerty2.length, text = ""; i < len; i++) {
             var stringCheck = qwerty2[i];
-            if(document.getElementById("pswd_to_check").value.includes(stringCheck)) {
+            if(document.getElementById("pswd_to_check").value.toLowerCase().includes(stringCheck)) {
                points += -5
             }
         }
         for (i = 0, len = qwerty3.length, text = ""; i < len; i++) {
             var stringCheck = qwerty3[i];
-            if(document.getElementById("pswd_to_check").value.includes(stringCheck)) {
+            if(document.getElementById("pswd_to_check").value.toLowerCase().includes(stringCheck)) {
                points += -5
             }
         }
@@ -58,7 +58,7 @@ function check() {
         document.getElementById("points").innerHTML = "<b>Password strength:</b> " + points;
     }
 
-    
+
     console.log("Matches character regex? " + matchesregex);
     console.log("Good length? " + correctlength);
     console.log("Upper case letter? " + ucl);
