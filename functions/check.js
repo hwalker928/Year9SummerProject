@@ -5,6 +5,7 @@ function check() {
     var lcl = /^(?=.*[a-z])/.test(document.getElementById("pswd_to_check").value);
     var digit = /^(?=.*[0-9])/.test(document.getElementById("pswd_to_check").value);
     var allowedsymbols = /^(?=.*[!$%^&*()_=+-])/.test(document.getElementById("pswd_to_check").value);
+    var onlyLetters = /^[a-zA-Z]+$/.test(document.getElementById("pswd_to_check").value);
 
     if (matchesregex&correctlength&ucl&lcl&digit&allowedsymbols == 1) {
         var extraifall = true;
@@ -23,6 +24,7 @@ function check() {
         if (digit) { points += 5 }
         if (allowedsymbols) { points += 5 }
         if (extraifall) { points += 10 }
+        if (onlyLetters) { points += -5 }
 
         document.getElementById("points").innerHTML = "<b>Password strength:</b> " + points;
     }
@@ -35,4 +37,5 @@ function check() {
     console.log("Digit? " + digit);
     console.log("Allowed symbols? " + allowedsymbols);
     console.log("All true? " + extraifall);
+    console.log("Only letters? " + onlyLetters);
 }
