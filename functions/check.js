@@ -63,7 +63,7 @@ function check() {
             var strength = "Medium";
         }
 
-        document.getElementById("points").innerHTML = "<b>Password strength:</b> " + points + "<b>[" + strength + "]</b>";
+        document.getElementById("points").innerHTML = "<b>Password strength:</b> " + strength + "(" + points + ")";
     }
 
 
