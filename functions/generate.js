@@ -6,5 +6,5 @@ function generate() {
         var char = Math.floor(Math.random()* characters.length + 1);
         pass += characters.charAt(char)
     }
-    document.getElementById("final_pass").value = pass;
+    document.getElementById("final_password").value = pass;
 }
