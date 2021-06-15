@@ -1,4 +1,6 @@
 function generate() {
+    var notstrong = 1;
+    while (notstrong = 1) {
     var passwordLength = Math.floor(Math.random() * 5) + 8;
     var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!$%^&*()-_=+';
     var pass = "";
@@ -76,7 +78,9 @@ function generate() {
         document.getElementById("points").innerHTML = "<b>Password strength:</b> " + strength + " (" + Math.round((points+66)/120*100) + "%)";
     }
 
-
+    if (strength == "Strong") {
+        notstrong = 0;
+    }
     console.log("Matches character regex? " + matchesregex);
     console.log("Good length? " + correctlength);
     console.log("Upper case letter? " + ucl);
@@ -88,4 +92,5 @@ function generate() {
     console.log("Only digits? " + onlyDigits);
     console.log("Only symbols? " + onlySymbols);
     console.log("Total points: " + points)
+    }
 }
