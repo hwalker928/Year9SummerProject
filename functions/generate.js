@@ -68,6 +68,7 @@ function generate() {
 
         if (points > 20) {
             var strength = "Strong";
+            notstrong = 0;
         } else if (points < 1) {
             var strength = "Weak";
         } else {
@@ -76,10 +77,6 @@ function generate() {
        
 
         document.getElementById("points").innerHTML = "<b>Password strength:</b> " + strength + " (" + Math.round((points+66)/120*100) + "%)";
-    }
-
-    if (strength == "Strong") {
-        notstrong = 0;
     }
     console.log("Matches character regex? " + matchesregex);
     console.log("Good length? " + correctlength);
