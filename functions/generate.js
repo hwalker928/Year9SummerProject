@@ -76,7 +76,7 @@ function generate() {
         }
        
 
-        document.getElementById("points").innerHTML = "<b>Password strength:</b> " + strength + " (" + Math.round((points+66)/120*100) + "%)";
+        document.getElementById("points").innerHTML = "<b>Password strength:</b> " + strength + " (" + points + ")";
     }
     console.log("Matches character regex? " + matchesregex);
     console.log("Good length? " + correctlength);
