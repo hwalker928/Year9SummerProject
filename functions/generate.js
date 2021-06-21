@@ -1,7 +1,9 @@
 function generate() {
     var notstrong = 1;
     while (notstrong === 1) {
-    var passwordLength = Math.floor(Math.random() * 5) + 8;
+    min = Math.ceil(8);
+    max = Math.floor(12);
+    var passwordLength = Math.floor(Math.random() * (max - min + 1) + min);
     var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!$%^&*()-_=+';
     var pass = "";
     for (i = 1; i <= passwordLength; i++) {
