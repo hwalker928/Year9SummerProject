@@ -13,7 +13,6 @@ function generate() {
     document.getElementById("final_password").value = pass;
     
     var matchesregex = /^[a-zA-Z0-9!$%^&*()-_=+]+$/.test(document.getElementById("final_password").value);
-    if (25>document.getElementById("final_password").value.length) { if (document.getElementById("final_password").value.length>7) { var correctlength = true; } else { var correctlength = false; } } else { var correctlength = false; }
     var ucl = /^(?=.*[A-Z])/.test(document.getElementById("final_password").value);
     var lcl = /^(?=.*[a-z])/.test(document.getElementById("final_password").value);
     var digit = /^(?=.*[0-9])/.test(document.getElementById("final_password").value);
@@ -27,17 +26,12 @@ function generate() {
     const qwerty3 = ["zxc", "xcv", "cvb", "vbn", "bnm"];
     console.clear();
 
-    if (matchesregex&correctlength&ucl&lcl&digit&allowedsymbols == 1) {
+    if (matchesregex&ucl&lcl&digit&allowedsymbols == 1) {
         var extraifall = true;
     } else {
         var extraifall = false;
     }
-
-    if (!(correctlength)) {
-        document.getElementById("points").innerHTML = "Your password must be between 8 and 24 characters."
-    } else if (!(matchesregex)) {
-        document.getElementById("points").innerHTML = "Your password may only contain the following symbols: ! $ % ^ & * ( ) - _ = +"
-    } else {
+        
         var points = document.getElementById("final_password").value.length;
         if (ucl) { points += 5 }
         if (lcl) { points += 5 }
@@ -81,7 +75,6 @@ function generate() {
         document.getElementById("points").innerHTML = "<b>Password strength:</b> " + strength + " (" + points + ")";
     }
     console.log("Matches character regex? " + matchesregex);
-    console.log("Good length? " + correctlength);
     console.log("Upper case letter? " + ucl);
     console.log("Lower case letter? " + lcl);
     console.log("Digit? " + digit);
