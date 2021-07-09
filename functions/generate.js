@@ -11,7 +11,7 @@ function generate() {
         pass += characters.charAt(char)
     }
     document.getElementById("final_password").value = pass;
-    
+
     var matchesregex = /^[a-zA-Z0-9!$%^&*()-_=+]+$/.test(document.getElementById("final_password").value);
     var ucl = /^(?=.*[A-Z])/.test(document.getElementById("final_password").value);
     var lcl = /^(?=.*[a-z])/.test(document.getElementById("final_password").value);
@@ -31,7 +31,7 @@ function generate() {
     } else {
         var extraifall = false;
     }
-        
+
         var points = document.getElementById("final_password").value.length;
         if (ucl) { points += 5 }
         if (lcl) { points += 5 }
@@ -70,7 +70,7 @@ function generate() {
         } else {
             var strength = "Medium";
         }
-       
+
 
         document.getElementById("points").innerHTML = "<b>Password strength:</b> " + strength + " (" + points + ")";
     }
@@ -84,5 +84,5 @@ function generate() {
     console.log("Only digits? " + onlyDigits);
     console.log("Only symbols? " + onlySymbols);
     console.log("Total points: " + points)
-    }
 }
+
