@@ -1,51 +1,36 @@
-import Head from 'next/head'
+import Head from "next/head";
 
-export default function Home() {
-  return (
-    <div className="container">
-      <Head>
-        <title>mypass.space</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+export default function FirstPost() {
+    return (
+        <div className="container">
+            <Head>
+                <title>mypass.space</title>
+                <link rel="icon" href="/favicon.ico" />
+            </Head>
 
-      <main>
-        <h1 className="title">
-          mypass.space
-        </h1>
+            <main>
+                <h1 className="title">
+                    Generate a password
+                </h1>
 
-        <p className="description">
-          An easy-to-use password checker and generator.
-        </p>
+                <p className="description">
+                    A tool to generate long and secure passwords.
+                </p>
 
-        <div className="grid">
-          <a href="/generate" className="card">
-            <h3>Generate &rarr;</h3>
-            <p>Generate a super secure password!</p>
-          </a>
+                <div className="container">
+                    <div className="form-group">
+                        <label htmlFor="final_password"><b>Generated Password:</b></label>
+                        <input type="text" className="form-control" id="final_password" disabled/>
+                    </div>
+                    <button type="button" className="btn btn-info float-right" onClick="generate()">Generate!</button>
+                    <button type="button" className="btn btn-info float-right mr-1"
+                            onClick="navigator.clipboard.writeText(document.getElementById('final_password').value); alert('Password was copied to clipboard!');">
+                        <i className="fas fa-clipboard"></i></button>
+                    <p id="points"><b>Password strength:</b> 0</p>
+                </div>
+            </main>
 
-          <a href="/check" className="card">
-            <h3>Check &rarr;</h3>
-            <p>Check an existing password!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className="card"
-          >
-            <h3>Source &rarr;</h3>
-            <p>View the source code!</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className="card">
-            <h3>Suggest &rarr;</h3>
-            <p>Have a suggestion?</p>
-          </a>
-        </div>
-      </main>
-
-      <style jsx>{`
+            <style jsx>{`
         .container {
           min-height: 100vh;
           padding: 0 0.5rem;
@@ -103,6 +88,12 @@ export default function Home() {
         }
 
         .description {
+          line-height: 1.5;
+          font-size: 1.5rem;
+          color: #FFFFFF;
+        }
+        
+        p {
           line-height: 1.5;
           font-size: 1.5rem;
           color: #FFFFFF;
@@ -171,7 +162,7 @@ export default function Home() {
         }
       `}</style>
 
-      <style jsx global>{`
+            <style jsx global>{`
         html,
         body {
           padding: 0;
@@ -186,6 +177,6 @@ export default function Home() {
           box-sizing: border-box;
         }
       `}</style>
-    </div>
-  )
+        </div>
+    )
 }
