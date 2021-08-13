@@ -29,7 +29,7 @@ export default function Home() {
           </a>
 
           <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
+            href="https://github.com/hwalker928/mypass.space"
             className="card"
           >
             <h3>Source &rarr;</h3>
@@ -37,7 +37,7 @@ export default function Home() {
           </a>
 
           <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+            href="https://github.com/hwalker928/mypass.space/issues/new"
             className="card">
             <h3>Suggest &rarr;</h3>
             <p>Have a suggestion?</p>
