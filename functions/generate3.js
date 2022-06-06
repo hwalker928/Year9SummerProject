@@ -12,13 +12,15 @@ function generate3() {
         for (i = 1; i <= numPosition; i++) {
             if(i === numPosition) {
                 var char = Math.floor(Math.random()* numbers.length + 1);
+                pass += numbers.charAt(char);
+            } else {
+                var char = Math.floor(Math.random()* characters.length + 1);
+                pass += characters.charAt(char);
             }
-            pass += numbers.charAt(char);
         }
         var char = Math.floor(Math.random()* symbols.length + 1);
         pass += symbols.charAt(char);
-        var char = Math.floor(Math.random()* characters.length + 1);
-        pass += characters.charAt(char);
+        
     }
 
     document.getElementById("final_password").value = pass;
