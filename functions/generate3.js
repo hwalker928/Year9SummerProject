@@ -4,25 +4,24 @@ function generate3() {
     var numbers = '0123456789';
     var symbols = '!$%^&*()-_=+';
 
-    var pass = "";
-
-    var numPosition = Math.floor(Math.random() * 3 + 1);
+    var pass = [];
+	var tempPass = "";
     
-    for (i = 1; i <= 3; i++) {
-        for (i = 1; i <= numPosition; i++) {
+    for (n = 0; n <= 2; n++) {
+	    var numPosition = Math.floor(Math.random() * 3 + 1) - 1;
+        for (i = 0; i <= 2; i++) {
             if(i === numPosition) {
                 var char = Math.floor(Math.random()* numbers.length + 1);
-                pass += numbers.charAt(char);
+                tempPass += numbers.charAt(char).valueOf();
             } else {
                 var char = Math.floor(Math.random()* characters.length + 1);
-                pass += characters.charAt(char);
+                tempPass += characters.charAt(char);
             }
         }
         var char = Math.floor(Math.random()* symbols.length + 1);
-        pass += symbols.charAt(char);
-        
+        tempPass += symbols.charAt(char);
+	    pass[n] = tempPass;
     }
 
-    document.getElementById("final_password").value = pass;
+    document.getElementById("final_password").value = pass[2].substring(0, pass[2].length - 1);;
 }
-
