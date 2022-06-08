@@ -8,7 +8,7 @@ function generate3() {
 	var tempPass = "";
     
     for (n = 0; n <= 2; n++) {
-	    var numPosition = Math.floor(Math.random() * 3 + 1) - 1;
+	    var numPosition = Math.floor(Math.random() * 3);
         for (i = 0; i <= 2; i++) {
             if(i === numPosition) {
                 var char = Math.floor(Math.random()* numbers.length + 1);
