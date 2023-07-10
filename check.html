@@ -1,32 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Check a password</title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-        <link rel="stylesheet" href="assets/stylesheet.css">
-        <script src="functions/check.js"></script>
-        <link rel="icon" href="assets/favicon.ico">
-        <meta content="password generator, password checker, password security checker, password, check my password, strength" name="keywords">
-        <meta content="index,follow,noodp,noydir" name="robots">
-        <meta property="og:keywords" content="password generator, password checker, password security checker, password, check my password, strength" />
-    </head>
-    <body>
-        <div class="container p-3 my-3 border border-container border-secondary">
-            <h1 style="text-align: center">Check a password</h1>
-            <p class="aligntomid">Here you can check any password to see how strong it is!<br/>Please note, this website does <b>not</b> store any of your information!</p>
-            <div class="container">
-                <div class="form-group">
-                    <label for="pswd_to_check"><b>Enter a password:</b></label>
-                    <input type="password" class="form-control" id="pswd_to_check" onchange="check()">
-                </div>
-                <button type="button" class="btn btn-info float-right" onclick="check()">Check!</button>
-                <p id="points"><b>Password strength:</b> 0</p>
-            </div>
+  <head>
+    <title>Check a password</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="assets/stylesheet.css" />
+    <script src="functions/check.js"></script>
+    <link rel="icon" href="assets/favicon.ico" />
+    <meta
+      content="password generator, password checker, password security checker, password, check my password, strength"
+      name="keywords"
+    />
+    <meta content="index,follow,noodp,noydir" name="robots" />
+    <meta
+      property="og:keywords"
+      content="password generator, password checker, password security checker, password, check my password, strength"
+    />
+  </head>
+  <body>
+    <div class="container p-3 my-3 border border-container border-secondary">
+      <h1 style="text-align: center">Check a password</h1>
+      <p class="aligntomid">
+        Here you can check any password to see how strong it is!<br />Please
+        note, this website does <b>not</b> store any of your information!
+      </p>
+      <div class="container">
+        <div class="form-group">
+          <label for="pswd_to_check"><b>Enter a password:</b></label>
+          <input
+            type="password"
+            class="form-control"
+            id="pswd_to_check"
+            onchange="check()"
+          />
         </div>
-    </body>
+        <button
+          type="button"
+          class="btn btn-info float-right"
+          onclick="check()"
+        >
+          Check!
+        </button>
+        <p id="points"><b>Password strength:</b></p>
+      </div>
+    </div>
+  </body>
 </html>
